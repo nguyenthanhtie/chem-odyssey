@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from 'react'
 import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom'
+import { Analytics } from '@vercel/analytics/react'
 
 // Common Components (Static - small & frequently used)
 import { AuthProvider } from '@/context/AuthContext'
@@ -170,6 +171,7 @@ function App() {
     <AuthProvider>
       <Router>
         <AppContent />
+        <Analytics />
       </Router>
     </AuthProvider>
   )
